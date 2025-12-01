@@ -3,13 +3,11 @@ class Solution(object):
         n = len(nums)
         ans = [1] * n
         
-        # prefix product
         prefix = 1
         for i in range(n):
             ans[i] = prefix
             prefix *= nums[i]
         
-        # suffix product
         suffix = 1
         for i in range(n-1, -1, -1):
             ans[i] *= suffix
