@@ -1,14 +1,9 @@
 class Solution(object):
     def rotate(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: None Do not return anything, modify nums in-place instead.
-        """
         n=len(nums)
         k=k%n
-        roated=[0]*n
-        for i in range(n):
-             roated[(i+k)%n]=nums[i]
-        for i in range(n):
-             nums[i]=roated[i]
+        r=[0]*n
+        for i in range(len(nums)):
+                r[(i+k)%n]=nums[i]
+        for i in range(len(nums)):
+            nums[i]=r[i]
