@@ -1,9 +1,6 @@
 class Solution(object):
     def reverseWords(self, s):
-        words = s.split()
-        words.reverse()
-        return " ".join(words)
-
-        
-
+        s=s.split()
+        s=s[::-1]
+        return " ".join(s)
         
