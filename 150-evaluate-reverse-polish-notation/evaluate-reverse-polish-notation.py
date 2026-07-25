@@ -14,7 +14,7 @@ class Solution(object):
                 if b * a < 0:
                     stack.append(-(abs(b) // abs(a)))
                 else:
-                    stack.append(abs(b) // abs(a))
+                    stack.append(b//a)
             else:
                 stack.append(int(i))
         return stack[-1]
